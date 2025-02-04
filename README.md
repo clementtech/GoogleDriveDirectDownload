@@ -8,8 +8,8 @@ https://drive.google.com/file/d/YourUniqueFileCode/view?usp=sharing
 https://drive.google.com/uc?export=download&id=YourUniqueFileCode
 
 # Road Map
-[x] Basic Convertion
-[] Ask User For Loop
-[] Auto Save Link History into a new file
-[] Catch for invalid link with try and except block
-[] GUI ?
+- [x] Basic Convertion
+- [] Ask User For Loop
+- [] Auto Save Link History into a new file
+- [] Catch for invalid link with try and except block
+- [] GUI ?
