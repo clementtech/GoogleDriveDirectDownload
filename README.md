@@ -11,5 +11,5 @@ https://drive.google.com/uc?export=download&id=YourUniqueFileCode
 - [x] Basic Convertion
 - [] Ask User For Loop
 - [] Auto Save Link History into a new file
-- [] Catch for invalid link with try and except block
+- [x] Catch for invalid link with try and except block
 - [] GUI ?
