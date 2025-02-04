@@ -9,7 +9,6 @@ https://drive.google.com/uc?export=download&id=YourUniqueFileCode
 
 # Road Map
 - [x] Basic Convertion
-- ~~[ ] Ask User For Loop~~ (Seems Like Not Useful)
 - [ ] Auto Save Link History into a new file
 - [x] Catch for invalid link with try and except block
 - [ ] GUI ?
