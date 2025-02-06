@@ -37,9 +37,7 @@ def main():
 
             import pyperclip
 
-            output_link = convert(str(input("Enter the Shared Link: ")))
-
-            pyperclip.copy(output_link)
+            print(pyperclip.copy(convert(str(input("Enter the Shared Link: ")))))
 
             pyperclip.paste()
 
