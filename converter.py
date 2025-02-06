@@ -39,7 +39,7 @@ def main():
 
             print(pyperclip.copy(convert(str(input("Enter the Shared Link: ")))))
 
-            pyperclip.paste()
+            pyperclip.paste("Copied to Clipboard!")
 
         
         except ModuleNotFoundError:
