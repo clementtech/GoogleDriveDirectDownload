@@ -31,9 +31,12 @@ def main():
     clipboard_consent = str(input("Do you want to use Pyperclip? (Y/N): ")).upper()
 
     if clipboard_consent == "Y":
-        import pyperclip
+        
 
         try:
+
+            import pyperclip
+            
             print(pyperclip.copy((convert(str(input("Enter the Shared Link: "))))))
 
             pyperclip.paste()
