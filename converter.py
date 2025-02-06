@@ -17,8 +17,6 @@
 # sys module is used to exit the program if the Shared Link is not in the correct format
 import sys
 
-import pyperclip
-
 # Main function
 def main():
     
@@ -33,7 +31,24 @@ def main():
     clipboard_consent = str(input("Do you want to use Pyperclip? (Y/N): ")).upper()
 
     if clipboard_consent == "Y":
-        ...
+        import pyperclip
+
+        try:
+            print(pyperclip.copy((convert(str(input("Enter the Shared Link: "))))))
+
+            pyperclip.paste()
+
+            
+
+        except ModuleNotFoundError:
+            print("Pyperclip module is not installed")
+            print("Please install the Pyperclip module using the following command:")
+            print("pip install pyperclip")
+
+        except pyperclip.PyperclipException:
+            print("Please visit: https://pypi.org/project/pyperclip/")
+            print("Seems like Pyperclip needs some dependencies to be installed")
+            print("Most likely you are using Linux :) Good Luck Installing and Fixing Useless Dependencies")
 
     else:
 
