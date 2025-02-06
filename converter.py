@@ -36,13 +36,12 @@ def main():
         try:
 
             import pyperclip
-            
-            print(pyperclip.copy((convert(str(input("Enter the Shared Link: "))))))
+
+            print(pyperclip.copy(convert(str(input("Enter the Shared Link: ")))))
 
             pyperclip.paste()
 
-            
-
+        
         except ModuleNotFoundError:
             print("Pyperclip module is not installed")
             print("Please install the Pyperclip module using the following command:")
@@ -53,12 +52,17 @@ def main():
             print("Seems like Pyperclip needs some dependencies to be installed")
             print("Most likely you are using Linux :) Good Luck Installing and Fixing Useless Dependencies")
 
-    else:
+    elif clipboard_consent == "N":
 
         # Printing the Direct Download Link
         # Ask the user to enter the Shared Link
         # Call the convert function and pass the Shared Link as an argument
+        print("Direct Download Link:")
         print(convert(str(input("Enter the Shared Link: "))))
+
+    else:
+        print("Invalid Input")
+        sys.exit("Please enter Y or N")
 
 # Convert function
 # This function is used to convert the Shared Link to Direct Download Link
@@ -84,7 +88,7 @@ def convert(link):
     unique_code = code(link)
 
     # Return the Direct Download Link
-    return f"Direct Download Link:\nhttps://drive.google.com/uc?export=download&id={unique_code}"
+    return f"https://drive.google.com/uc?export=download&id={unique_code}"
 
 # Code function
 # This function is used to get the Unique Code from the Shared Link
