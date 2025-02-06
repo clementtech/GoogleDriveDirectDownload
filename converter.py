@@ -22,10 +22,25 @@ import pyperclip
 # Main function
 def main():
     
-    # Printing the Direct Download Link
-    # Ask the user to enter the Shared Link
-    # Call the convert function and pass the Shared Link as an argument
-    print(convert(str(input("Enter the Shared Link: "))))
+    
+    print("This program converts Google Drive Shared Link to Direct Download Link")
+    print("This program uses Pyperclip module to get the Shared Link from the Clipboard")
+    print("You can install the Pyperclip module using the following command:")
+    print("pip install pyperclip")
+
+    print("This program will respect your choice and provide you the option to not use the Pyperclip module")
+
+    clipboard_consent = str(input("Do you want to use Pyperclip? (Y/N): ")).upper()
+
+    if clipboard_consent == "Y":
+        ...
+
+    else:
+
+        # Printing the Direct Download Link
+        # Ask the user to enter the Shared Link
+        # Call the convert function and pass the Shared Link as an argument
+        print(convert(str(input("Enter the Shared Link: "))))
 
 # Convert function
 # This function is used to convert the Shared Link to Direct Download Link
