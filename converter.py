@@ -17,6 +17,8 @@
 # sys module is used to exit the program if the Shared Link is not in the correct format
 import sys
 
+import pyperclip
+
 # Main function
 def main():
     

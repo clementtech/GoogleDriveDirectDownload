@@ -13,5 +13,5 @@ https://drive.google.com/uc?export=download&id=YourUniqueFileCode
 - [x] Catch for invalid link with try and except block
 - [ ] GUI ?
 
-- Got Annoyed that I have to Keep Manually selecting and copy the link. Adding new fuction that auto paste link to clipboard with paperclip
+- Got Annoyed that I have to Keep Manually selecting and copy the link. Adding new fuction that auto paste link to clipboard with pyperclip
 - [ ] Auto Paste Link to clipboard
