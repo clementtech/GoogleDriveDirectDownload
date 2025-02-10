@@ -20,24 +20,29 @@ import sys
 # Main function
 def main():
     
-    
+    # Display information about the program
     print("This program converts Google Drive Shared Link to Direct Download Link")
     print("This program uses Pyperclip module to get the Shared Link from the Clipboard")
     print("You can install the Pyperclip module using the following command:")
     print("pip install pyperclip")
 
+    # Display user consent form to use pyperclip module
     print("This program will respect your choice and provide you the option to not use the Pyperclip module")
 
+    # Ask for user consent to use pyperclip module
     clipboard_consent = str(input("Do you want to use Pyperclip? (Y/N): ")).upper()
 
+    # If the user accept the user consent to use the pyperclip module
     if clipboard_consent == "Y":
         
-
+        # Try and Except block to prevent errors such as user have not installed the pyperclip module error
         try:
 
+            # Import pyperclip module, function in python that allows the code to access/use clipboard features
             import pyperclip
 
-            print(pyperclip.copy(convert(str(input("Enter the Shared Link: ")))))
+            
+            pyperclip.copy(convert(str(input("Enter the Shared Link: "))))
 
             pyperclip.paste()
 
