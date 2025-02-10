@@ -41,23 +41,40 @@ def main():
             # Import pyperclip module, function in python that allows the code to access/use clipboard features
             import pyperclip
 
+            # Request User Input for Shared Link
+            # Convert Input Link into String
+            # Calls convert function to convert the link into direct download function
+            # Use pyperclip function to copy the output
             pyperclip.copy(convert(str(input("Enter the Shared Link: "))))
 
+            # Use pyperclip function to paste the item into the clipboard
             pyperclip.paste()
 
+            # Display Success Message to the User
             print("Copied to Clipboard!")
 
-        
+        # Except ModuleNotFoundError will appear if the user have not installed the pyperclip module
+        # Pyperclip can be installed by typing the following command into the terminal
+        # pip install pyperclip        
         except ModuleNotFoundError:
+
+            # Display Error Message
             print("Pyperclip module is not installed")
             print("Please install the Pyperclip module using the following command:")
             print("pip install pyperclip")
 
+        # Except pyperclip.PyperclipException will appear if the dependencies is not installed correctly
+        # Usually this error will occurs for Linux Users
         except pyperclip.PyperclipException:
+
+            # Display Error Message
+            # Good Luck Fixing, that's what all I could say :D
             print("Please visit: https://pypi.org/project/pyperclip/")
             print("Seems like Pyperclip needs some dependencies to be installed")
             print("Most likely you are using Linux :) Good Luck Installing and Fixing Useless Dependencies")
 
+    # If the User does not agree to use pyperclip module
+    # This is suitable for Linux users who cannot get their pyperclip module issues fixed
     elif clipboard_consent == "N":
 
         # Printing the Direct Download Link
@@ -66,9 +83,12 @@ def main():
         print("Direct Download Link:")
         print(convert(str(input("Enter the Shared Link: "))))
 
+    # If the User choose nether Y or N, which means the user inputed an invalid choice
     else:
+
+        # Display Error Messages
         print("Invalid Input")
-        sys.exit("Please enter Y or N")
+        print("Please enter Y or N")
 
 # Convert function
 # This function is used to convert the Shared Link to Direct Download Link
