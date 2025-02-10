@@ -41,8 +41,7 @@ def main():
             # Import pyperclip module, function in python that allows the code to access/use clipboard features
             import pyperclip
 
-            
-            pyperclip.copy(convert(str(input("Enter the Shared Link: "))))
+            print(pyperclip.copy(convert(str(input("Enter the Shared Link: ")))))
 
             pyperclip.paste()
 
