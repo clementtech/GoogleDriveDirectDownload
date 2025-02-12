@@ -12,8 +12,5 @@ https://drive.google.com/uc?export=download&id=YourUniqueFileCode
 - [ ] Auto Save Link History into a new file
 - [x] Catch for invalid link with try and except block
 - [ ] GUI ?
-
-- Got Annoyed that I have to Keep Manually selecting and copy the link. Adding new fuction that auto paste link to clipboard with pyperclip
 - [x] Auto Paste Link to clipboard
-
 - [ ] Mass convert link from a .txt file with full of link into direct download format using with/open function in Python
