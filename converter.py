@@ -17,6 +17,8 @@ link_input = str(input("Link: "))
 # Proceed with the program
 if re.search(link_format, link_input):
 
+    # Write all URL into history.txt file "link history"
+    # append history.txt, if file does not exist, it will create a new file, if it exist, just add a new line into the file
     with open("history.txt", "a") as link_history:
 
         # Split out the front part of the link
@@ -43,6 +45,7 @@ if re.search(link_format, link_input):
         # Show success message to the user and display the converted link
         print(f"Copied link to clipboard: {converted_link}")
 
+        # Write the link into the history.txt file
         link_history.write(f"{converted_link}\n")
 
 # If link does not matches
