@@ -17,29 +17,33 @@ link_input = str(input("Link: "))
 # Proceed with the program
 if re.search(link_format, link_input):
 
-    # Split out the front part of the link
-    link_format_split_a = r"https://drive.google.com/file/d/"
+    with open("history.txt", "a") as link_history:
 
-    # Left the back nonsense of the link
-    link_split_a = re.split(link_format_split_a, link_input)[1]
+        # Split out the front part of the link
+        link_format_split_a = r"https://drive.google.com/file/d/"
 
-    # Split the last part of the link
-    link_format_split_b = r"/view\?usp="
+        # Left the back nonsense of the link
+        link_split_a = re.split(link_format_split_a, link_input)[1]
 
-    # The link should just remain the id which is what we want
-    link_id = re.split(link_format_split_b, link_split_a)[0]
+        # Split the last part of the link
+        link_format_split_b = r"/view\?usp="
 
-    # Build the export link with the link id
-    converted_link = f"https://drive.google.com/uc?export=download&id={link_id}"
+        # The link should just remain the id which is what we want
+        link_id = re.split(link_format_split_b, link_split_a)[0]
 
-    # Copy the converted_link into user clipboard
-    pyperclip.copy(converted_link)
+        # Build the export link with the link id
+        converted_link = f"https://drive.google.com/uc?export=download&id={link_id}"
 
-    # Paste the link into the user clipboard
-    pyperclip.paste()
+        # Copy the converted_link into user clipboard
+        pyperclip.copy(converted_link)
 
-    # Show success message to the user and display the converted link
-    print(f"Copied link to clipboard: {converted_link}")
+        # Paste the link into the user clipboard
+        pyperclip.paste()
+
+        # Show success message to the user and display the converted link
+        print(f"Copied link to clipboard: {converted_link}")
+
+        link_history.write(f"{converted_link}\n")
 
 # If link does not matches
 else: 
