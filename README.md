@@ -42,3 +42,8 @@ https://drive.google.com/uc?export=download&id=YourUniqueFileCode
     ```
     python converter.py
     ```
+
+# Features:
+- Convert Google Drive Link into Direct Download Link
+- Paste converted link into user clipboard
+- Link history
