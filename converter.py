@@ -22,8 +22,7 @@ if re.search(link_format, link_input):
 
     pyperclip.paste()
 
-
-
+    print(f"Copied link to clipboard: {converted_link}")
 
 else: 
-    ...
+    sys.exit("Invalid Link.")
