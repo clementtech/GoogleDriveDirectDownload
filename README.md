@@ -21,3 +21,24 @@ https://drive.google.com/uc?export=download&id=YourUniqueFileCode
 
 ### Error handling:
 ![image](https://raw.githubusercontent.com/clementtech/GoogleDriveDirectDownload/refs/heads/main/assets/error_handling.png)
+
+# Prerequisites:
+- [Python](https://www.python.org/downloads/)
+
+# How to use:
+1. Download the project onto your computer.
+    - You can download the project by using the [git](https://git-scm.com/downloads) command:
+    ```
+    git clone https://github.com/clementtech/GoogleDriveDirectDownload.git
+    ```
+
+2. Download the required dependencies.
+    - The dependencies can be installed using the following command:
+    ```
+    pip install -r requirements.txt
+    ```
+3. Done setup!
+    - You can run the program by entering the following command:
+    ```
+    python converter.py
+    ```
