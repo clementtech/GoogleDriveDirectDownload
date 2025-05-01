@@ -1,3 +1,4 @@
+
 try:
     # Import library into the program
     # Pyperclip is used to copy/paste URL to clipboard
@@ -6,8 +7,9 @@ try:
     import re
     # sys is used to exit the program when invalid link is provided
     import sys
-except ImportError:
-    ...
+except (ImportError, ModuleNotFoundError):
+    sys.exit("Missing required libraries. Please install them by typing the following command: pip install -r requirements.txt")
+
 
 # Regex, link format that the re should cross check with the input to ensure the link is valid
 link_format =  r"^https://drive.google.com/file/d/.+/view\?usp=.+$"
