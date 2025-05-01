@@ -1,7 +1,7 @@
 # Google Drive Direct Download
 A Python Program that convert Google Drive Link into Direct Download Link
 
-# How it works?
+# How does it works?
 ### Typical Shared Link Format:
 ```
 https://drive.google.com/file/d/YourUniqueFileCode/view?usp=sharing
