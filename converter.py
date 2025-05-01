@@ -12,7 +12,7 @@ link_format =  r"^https://drive.google.com/file/d/.+/view\?usp=.+$"
 # Request link input from user and convert it to string
 link_input = str(input("Link: "))
 
-# re.search(template, input)
+# re.match(template, input)
 # If the input matches with the format
 # Proceed with the program
 if re.match(link_format, link_input):
