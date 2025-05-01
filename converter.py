@@ -1,10 +1,13 @@
-# Import library into the program
-# Pyperclip is used to copy/paste URL to clipboard
-import pyperclip
-# Regular Expression (re) is used to check if the link is valid and extract id
-import re
-# sys is used to exit the program when invalid link is provided
-import sys
+try:
+    # Import library into the program
+    # Pyperclip is used to copy/paste URL to clipboard
+    import pyperclip
+    # Regular Expression (re) is used to check if the link is valid and extract id
+    import re
+    # sys is used to exit the program when invalid link is provided
+    import sys
+except ImportError:
+    ...
 
 # Regex, link format that the re should cross check with the input to ensure the link is valid
 link_format =  r"^https://drive.google.com/file/d/.+/view\?usp=.+$"
