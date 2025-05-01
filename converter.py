@@ -15,7 +15,7 @@ link_input = str(input("Link: "))
 # re.search(template, input)
 # If the input matches with the format
 # Proceed with the program
-if re.search(link_format, link_input):
+if re.match(link_format, link_input):
 
     # Write all URL into history.txt file "link history"
     # append history.txt, if file does not exist, it will create a new file, if it exist, just add a new line into the file
