@@ -1,4 +1,4 @@
-
+# Try and Except block to handle errors for missing libraries
 try:
     # Import library into the program
     # Pyperclip is used to copy/paste URL to clipboard
@@ -7,7 +7,11 @@ try:
     import re
     # sys is used to exit the program when invalid link is provided
     import sys
+
+# If the library is not installed, it will raise an ImportError or ModuleNotFoundError
 except (ImportError, ModuleNotFoundError):
+
+    # Exit the program with error message
     sys.exit("Missing required libraries. Please install them by typing the following command: pip install -r requirements.txt")
 
 
